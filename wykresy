@@ -1,0 +1,80 @@
+import matplotlib.pyplot as plt
+
+
+x = [2023, 2024, 2025, 2026]
+y = [20, 45, 30, 50]
+
+
+plt.plot(x, y, marker="o")
+
+
+plt.xlabel("Year")
+plt.ylabel("Number of students")
+plt.title("Number of students from 2023 to 2026")
+
+
+plt.grid(True)
+plt.show()
+
+#--------------------------------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
+
+year = [2023, 2024, 2025, 2026]
+students = [20, 45, 30, 50]
+
+
+# plt.plot(year, students, marker="o", ms=20, markerfacecolor="red", markeredgecolor ="green",linestyle = "dashed")
+# plt.plot(year, students, marker="o", ms=20, markerfacecolor="blue", markeredgecolor ="green",linestyle="solid")
+# plt.plot(year, students, marker="o", ms=20, markerfacecolor="blue", markeredgecolor ="green",linestyle="None")
+plt.plot(year, students, marker="o", ms=20, markerfacecolor="blue", markeredgecolor ="green",linestyle="solid", linewidth=4)
+
+
+plt.xlabel("Year")
+plt.ylabel("Number of students")
+plt.title("Number of students from 2023 to 2026")
+
+
+# plt.xticks(year)
+plt.grid(True)
+plt.show()
+
+#-------------------------------------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
+year = [2023, 2024, 2025, 2026]
+students_a = [20, 45, 30, 23]
+students_b = [26, 75, 30, 23]
+students_c = [32, 54, 43, 65]
+
+line_style = dict(
+    marker="o",
+    ms=15,
+    linestyle="solid",
+    linewidth=2
+)
+
+plt.plot(year, students_a, **line_style, label="Students A")
+plt.plot(year, students_b, **line_style, label="Students B")
+plt.plot(year, students_c, **line_style, label="Students C")
+
+xlabel_style = dict(
+    fontweight = "bold"
+)
+
+plt.xlabel("Year", **xlabel_style)
+plt.xticks(year)
+
+
+ylabel_style = dict(
+    fontweight = "bold"
+)
+
+plt.ylabel("Number of students", **ylabel_style)
+plt.title("Number of students from 2023 to 2026", fontweight = "bold")
+
+plt.legend()
+plt.grid(True)
+plt.show()
